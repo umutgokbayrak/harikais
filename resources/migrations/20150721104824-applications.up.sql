@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS applications
+(id INTEGER AUTO_INCREMENT,
+ job_id VARCHAR(50) NOT NULL,
+ user_id VARCHAR(50) NOT NULL,
+ is_seen BOOLEAN DEFAULT FALSE,
+ is_rejected BOOLEAN DEFAULT FALSE,
+ is_accepted BOOLEAN DEFAULT FALSE,
+ is_chatted BOOLEAN DEFAULT FALSE,
+ created_at TIMESTAMP NULL,
+ seen_at TIMESTAMP NULL,
+ rejected_at TIMESTAMP NULL,
+ accepted_at TIMESTAMP NULL,
+ cover_letter LONGTEXT,
+ PRIMARY KEY (id),
+ KEY index_user_id (user_id),
+ KEY index_job_id (job_id));

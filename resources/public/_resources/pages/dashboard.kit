@@ -1,0 +1,96 @@
+<!-- $pageClass = dashboard -->
+<!-- $pageCSS = dashboard.css -->
+<!-- $pageJS = dashboard.min.js -->
+<!-- $title = Harika İş # Son durum -->
+<!-- $menu1 = - -->
+<!-- $menu2 = - -->
+<!-- $menu3 = - -->
+<!-- $menu4 = - -->
+<!-- @include include/_header.kit -->
+
+
+<div class="overview">
+	<div class="container">
+		<div class="row">
+			<a href="#"> <b> 8 </b> <span> Yeni Aday </span> </a>
+			<a href="#"> <b> 45 </b> <span> Değerlendirme bekliyor </span> </a>
+			<a href="#"> <b> 10 </b> <span> Görüşülüyor </span> </a> 
+			<a href="#"> <b> 3 </b> <span> Onaylandı </span> </a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+<!-- <div class="col-md-4">
+	<nav class="hidden-print hidden-xs hidden-sm affix">
+	    <ul class="nav">
+	        <li><a href="#">Kullanıcı Bilgileri</a></li>
+			<li><a href="#">Ayarlar</a></li>
+			<li><a href="#">Bildirim Ayarları</a></li>
+			<li><a href="#">Çıkış Yap</a></li>
+		</ul>
+	</nav>
+
+</div> -->
+
+	<div class="row">
+		<div class="col-md-9">
+			<div class="page-header">
+			  <h1>Adaylar</h1>
+			</div>
+			<!-- eger aday varsa -->
+			<div class="table-responsive" id="adaylar">
+			  <table class="table table-hover">
+
+<!-- @include include/_candidate-list.kit -->
+
+			  </table>
+			  <a href="candidates.html" class="btn btn-default">Tüm adayları listele</a>
+			</div>
+
+			<!-- eger ilan var aday yoksa -->
+			<div class="alert alert-info" role="alert">
+			  Henüz ilanlarınıza başvuran bir aday yok. Başvuru geldiğinde size e-posta ile bilgilendireceğiz. Lütfen daha sonra tekrar deneyin veya <a href="#" class="alert-link">yeni bir ilan ekleyin.</a>
+			</div>
+
+			<!-- eger ilan yoksa -->
+
+			<div class="alert alert-info" role="alert">
+			  Henüz hiç ilan tanımlamadınız. Şimdi <a href="#" class="alert-link">yeni bir ilan ekleyin.</a>
+			</div>
+
+
+		</div>
+
+		<div class="col-md-3">
+			<div class="page-header">
+			  <h1>İlanlarım</h1>
+			</div>
+			<div class="table-responsive">
+			<table class="table table-hover">
+				<tr>
+					<td><a href="#basvurulistesi">Sr. UI-UX Designer</a></td>
+					<td>( 30 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">Front-End Developer</a></td>
+					<td>( 8 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">Sr. Java Developer</a></td>
+					<td>( 12 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">System Analyst</a></td>
+					<td>( 0 )</td>
+				</tr>
+			</table>
+			<a href="jobs_new.html" class="btn btn-block btn-primary">Yeni İlan Ekle</a>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- @include include/_footer.kit -->

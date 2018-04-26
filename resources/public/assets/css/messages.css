@@ -1,0 +1,124 @@
+#mesajlar .profile_pic {
+  width: 48px;
+  min-height: 48px;
+}
+#mesajlar .u_name {
+  display: block;
+  font-weight: bold;
+}
+#mesajlar .m_summary {
+  color: #777777;
+}
+#mesajlar tr.unread_row .m_summary {
+  color: inherit;
+}
+#messageusers {
+  display: block;
+  overflow: auto;
+}
+#messageusers.list-group {
+  margin-bottom: 0px;
+}
+#messageusers .list-group-item {
+  position: relative;
+  padding-left: 48px;
+}
+#messageusers .list-group-item img.profile_pic {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 8px;
+}
+#messageusers .list-group-item h5 {
+  margin: 0;
+}
+#messageusers .list-group-item span {
+  display: block;
+  margin: 4px auto;
+}
+#messageusers .list-group-item span.summ {
+  font-size: 12px;
+  color: #aaa;
+}
+#messageusers .list-group-item span.job {
+  font-size: 11px;
+}
+#messageusers .list-group-item span.time {
+  font-size: 10px;
+  color: #5bc0de;
+  position: absolute;
+  right: 16px;
+  top: 5px;
+}
+#messageusers .list-group-item.active span.summ {
+  color: rgba(255, 255, 255, 0.5);
+}
+#messageusers .list-group-item.active span.time {
+  color: rgba(255, 255, 255, 0.4);
+}
+.form-message-sender {
+  background-color: #eeeeee;
+  position: fixed;
+  box-sizing: border-box !important;
+  width: auto;
+  bottom: 0;
+  padding: 16px;
+  padding-bottom: 0px;
+}
+body.message-detail {
+  overflow: none;
+}
+body.message-detail footer {
+  display: none;
+}
+#conversation {
+  overflow: auto;
+}
+#conversation .message {
+  position: relative;
+  padding: 16px;
+  padding-left: 78px;
+  min-height: 86px;
+  border-bottom: 1px solid #eeeeee;
+}
+#conversation .message.to {
+  border-left: 2px solid #5bc0de;
+}
+#conversation .message img.profile_pic {
+  position: absolute;
+  left: 16px;
+  width: 48px;
+}
+#conversation .message h5 {
+  font-weight: bold;
+  float: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#conversation .message span.time {
+  float: right;
+  font-size: 10px;
+  color: #5bc0de;
+}
+#conversation .message p {
+  clear: both;
+  float: none;
+  margin: 0;
+}
+#message-header {
+  background-color: #eeeeee;
+  padding: 16px;
+  position: relative;
+  padding-left: 78px;
+  border-bottom: 1px solid #d5d5d5;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#message-header img.profile_pic {
+  position: absolute;
+  left: 16px;
+  width: 48px;
+}
+#message-header h2 {
+  margin: 0;
+}

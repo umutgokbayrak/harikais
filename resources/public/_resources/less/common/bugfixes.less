@@ -1,0 +1,124 @@
+.page-header + .table-responsive {
+	margin-top: -21px;
+}
+
+.help-block {
+	font-size: 11px;
+	margin-bottom: 2em;
+	color: #bbb;
+}
+
+.input-group {
+	&.block {
+		width: 100%;
+	}
+	input {
+		text-align: center;
+	}
+	input:first-child {
+		border-radius: 3px 0 0 3px;
+	}
+	input:last-child {
+		border-radius: 0 3px 3px 0;
+	}
+	.input-group-addon {
+		width: auto;
+		min-width: 16px;
+		padding: 4px 5px;
+		font-weight: normal;
+		line-height: @line-height-base;
+		text-align: center;
+		text-shadow: 0 1px 0 #fff;
+		vertical-align: middle;
+		background-color: @input-group-addon-bg;
+		border: solid @input-group-addon-border-color;
+		border-width: 1px 0;
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	input + .input-group-addon {
+		border-right-width: 1px;
+
+	}
+	.input-group-addon + input {
+		border-left-width: 0px;
+	}
+
+}
+
+h1 small {
+	color: @gray-light;
+}
+
+.table {
+	td {
+		vertical-align: middle !important;
+	}
+	td.select {
+		max-width:24px;
+	}
+	tr.selected {
+		background-color: lighten(@brand-info, 30%);
+	}
+
+	tr:last-child {
+		border-bottom: 1px solid @table-border-color;
+	}
+}
+
+.table-responsive {
+	margin-bottom: 20px;
+	.functions {
+		background-color: @gray-lighter;
+		padding: 8px;
+
+		label {
+			font-weight: normal;
+			.button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+			 margin-bottom: 0px;
+			 padding-left: 0;
+			 vertical-align: middle;
+			input {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+.ghost-header {
+	height: 100px;
+}
+
+.list-group.no-border {
+	.list-group-item {
+		border:none !important;
+	}	
+}
+
+select.form-control {
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+	
+	display: block;
+	width: 100%;
+	height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding: @padding-base-vertical @padding-base-horizontal;
+	font-size: @font-size-base;
+	line-height: @line-height-base;
+	color: @input-color;
+	background-color: @input-bg;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Im9rIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEuMDAwMDAwLCAtMTMuMDAwMDAwKSI+ICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZS0xIiBmaWxsLW9wYWNpdHk9IjAiIGZpbGw9IiNEOEQ4RDgiIHg9IjAiIHk9IjAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PC9yZWN0PiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMSwxMyBMMjEsMTMgTDE2LDE5IEwxMSwxMyBaIiBpZD0iVHJpYW5nbGUtMSIgZmlsbD0iIzIzMzEzRCI+PC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
+	background-position: right 10px center;
+	background-repeat: no-repeat;
+	border: 1px solid @input-border;
+	border-radius: @input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		border: 0;
+		background-color: transparent;
+	}
+}

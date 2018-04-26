@@ -1,0 +1,29 @@
+{% extends "mail-templates/base.html" %}
+{% block content %}
+<p>Merhaba,</p>
+<p>Aşağıdaki açık pozisyonun ilginizi çekebileceğini düşündük.</p>
+<p>
+    Harika İş mobil uygulamamız içerisinden:
+    <ol>
+        <li>{{ company.company_name }} insan kaynakları departmanı ile kimliğinizi
+            gizli tutarak yazışabilir</li>
+        <li>Pozisyona başvurabilir</li>
+        <li>Pozisyon için bir arkadaşınızı önerebilirsiniz.</li>
+    </ol>
+</p>
+<hr/>
+
+<img src="{{ url-prefix }}/company_photo?id={{ company.company_id }}" style="width:500px;"/>
+<p>
+    <strong>Pozisyon</strong>: {{ job.headline }}<br/>
+    <strong>Şirket</strong>: {{ company.company_name }}<br/>
+    <strong>Lokasyon</strong>: {{ job.location }}<br/>
+</p>
+<p>
+    <strong>İş Hakkında</strong>:<br/>
+    {{ job.long_description|safe }}<br/>
+    <strong>Şirket Hakkında</strong>:<br/>
+    {{ company.short_description|safe }}
+</p>
+
+{% endblock %}

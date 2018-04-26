@@ -1,0 +1,105 @@
+// Page Specific CSS
+// CSS Group : JOBS
+// File Name : jobs.css
+// Author : Ugur Akdemir
+
+// Project Variables And Mixins imports
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "common/mixin.less";
+// 
+.sidebar {
+	// position: relative;
+}
+
+.affix-width() {
+	
+	@media (min-width: @screen-sm-min) {
+		width: 210px;
+	}
+	@media (min-width: @screen-md-min) {
+		width: 283px;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: 253px;
+	}
+	@media (max-width: @screen-phone) {
+		width: 100%;
+		position: static !important;
+		margin-top: 100px;
+	}
+
+}
+
+
+.affix {
+	position: fixed;
+    top: 20px;
+    .affix-width();
+}
+
+.affix-top {
+	position: static;
+	.affix-width();
+}
+
+.affix-bottom {
+	position: absolute;
+	.affix-width()
+}
+
+
+
+
+.jPreview {
+	background: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	box-shadow: 0px 2px 2px 0px #E3E3E3;
+	border-radius: 8px;
+	padding: 8px 0;
+	& > div {
+		text-align: center;
+		font-size: 12px;
+		padding-left: 8px;
+		padding-right: 8px;
+		margin-bottom: 6px;
+	}
+	.company {
+		color: #333;
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+	.headline {
+		color: #999;
+	}
+	.photo {
+		padding: 0;
+		img {
+			max-width: 100%;
+		}
+	}
+	.location {
+		text-align: left;
+		font-weight: bold;
+		&:before {
+			.material-icons();
+			content: "location_on";
+			font-size: 12px;
+			padding-top: 2px;
+		}
+	}
+	.description {
+		text-align: left;
+		height: 116px;
+		overflow: scroll;
+	}
+
+	.company,
+	.headline {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+
+}

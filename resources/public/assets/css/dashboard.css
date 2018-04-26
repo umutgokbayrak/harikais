@@ -1,0 +1,50 @@
+.overview {
+  background-color: #3b3253;
+  margin-top: -20px;
+  outline: 1px solid #241f33;
+}
+.overview .row > a {
+  display: block;
+  width: 25%;
+  float: left;
+  padding: 3em 2px;
+  outline: 1px solid #241f33;
+}
+@media (max-width: 480px) {
+  .overview .row > a {
+    font-size: 11px;
+  }
+}
+.overview .row > a:hover {
+  background-color: #524573;
+  text-decoration: none;
+}
+.overview .row > a b,
+.overview .row > a span {
+  display: block;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+  color: white;
+}
+.overview .row > a b {
+  font-size: 3em;
+  font-weight: lighter;
+  margin-top: -0.3em;
+}
+@media (max-width: 480px) {
+  .overview .row > a b {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .overview .row > a span {
+    font-size: 11px;
+  }
+}
+.overview + * {
+  clear: both;
+}
+.notifications {
+  background-color: #eeeeee;
+}

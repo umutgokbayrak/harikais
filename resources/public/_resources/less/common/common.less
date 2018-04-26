@@ -1,0 +1,145 @@
+* {
+    -webkit-font-smoothing: subpixel-antialiased;
+    .box-sizing(border-box);
+    // outline: 1px dashed;
+    // -webkit-user-select: none;
+    // -khtml-user-select: none;
+    // -moz-user-select: -moz-none;
+    // -o-user-select: none;
+    // user-select: none;
+}
+
+/* Standard flashing */
+@-webkit-keyframes pulse-icon {
+  0%, 100% {
+    color: @brand-info;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.count {
+    &:before {
+        .material-icons();
+        font-size: 14px;
+        margin-top: 2px;
+        vertical-align: baseline;
+        color: gray;
+        padding-top: 2px;
+        margin-right: 4px;
+    }
+    // background-color: #eee;
+    // padding: 0px 8px;
+    border-radius: 20px;
+    color: inherit;
+    &.apps {
+       &:before {
+         content: "face";
+       } 
+    }
+    &.msg {
+       &:before {
+         content: "message";
+       } 
+    }
+    &.new,
+    &.new:before {
+        color: @link-color !important;
+        // -webkit-animation: pulse-icon .7s infinite;
+    }
+}
+
+a.hidelink {
+  color: inherit;
+}
+
+.unread {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: @brand-info;
+  .border-radius(20px);
+  margin: 0 auto;
+}
+
+tr.unread_row {
+  background-color: lighten(@brand-info, 35%);
+}
+
+input[type="search"] {
+  background-image: url("../img/ic_search_black_18dp.png");
+  background-size: 18px;
+  background-position: 4px;
+  background-repeat: no-repeat;
+  padding-left: 26px;
+}
+
+
+// Aday Table
+
+.favorite {
+  position: relative;
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      content: "star";
+      color: @brand-primary;
+    }
+  }
+  & > label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    &:after {
+      .material-icons();
+      content: "star_border";
+      position: absolute;
+      top: 0;
+      left: -1px;
+      line-height: 20px;
+      color: @gray-light;
+    }
+  }
+}
+
+.matchbar {
+  min-width: 48px;
+  height: 10px;
+  background-color: @gray-lighter;
+  margin-top: 6px;
+  .border-radius(20px);
+  span {
+    display: block;
+    height: inherit;
+    background-color: @brand-success;
+    .border-radius(20px);
+  }
+}
+
+.is_seen,
+.is_rejected,
+.is_accepted,
+.is_chatted {
+  max-width: 24px;
+  i { 
+    font-size: 16px;
+    line-height: 24px;
+    color: @gray-lighter; 
+  }
+  &.done i{ color: @brand-info; }
+}
+
+#adaylar {
+  table {
+    img.profile_pic {max-width: 24px;}
+  }
+}
+
+img.profile_pic {
+  .border-radius(100px);
+}
+

@@ -1,0 +1,53 @@
+// Page Specific CSS
+// CSS Group : DASHBOARD
+// File Name : dashboard.css
+// Author : Ugur Akdemir
+
+// Project Variables And Mixins imports
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "common/mixin.less";
+// 
+
+.overview {
+	background-color: @brand-bg;
+	margin-top: -20px;
+	outline: 1px solid @navbar-inverse-border;
+	& .row > a {
+		display: block;
+		width: 25%;
+		float: left;
+		padding: 3em 2px;
+		@media (max-width: @screen-phone) { font-size: 11px	}
+		outline: 1px solid @navbar-inverse-border;
+		&:hover {
+			background-color: lighten(@brand-bg, 10%);
+			text-decoration: none;
+		}
+		b,span {
+			display: block;
+			text-align: center;
+			margin: 0;
+			line-height: 1.4;
+			color: white;
+		}
+		b {
+			font-size: 3em;
+			font-weight: lighter;
+			margin-top: -.3em;
+			@media (max-width: @screen-phone) { font-size: 2em	}
+		}
+		span {
+			@media (max-width: @screen-phone) { font-size: 11px	}
+		}
+	}
+	& + *{
+		clear: both;
+	}
+
+}
+
+
+.notifications {
+	background-color: @gray-lighter;
+}

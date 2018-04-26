@@ -1,0 +1,164 @@
+// Page Specific CSS
+// CSS Group : MESSAGES
+// File Name : messages.css
+// Author : Ugur Akdemir
+
+// Project Variables And Mixins imports
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "common/mixin.less";
+// 
+.sidebar {
+	// position: relative;
+}
+
+#mesajlar {
+	.profile_pic {
+		width: 48px;
+		min-height: 48px;
+	}
+
+	.u_name {
+		display: block;
+		font-weight: bold;
+	}
+
+	.m_summary {
+		color: @gray-light;
+	}
+
+	tr.unread_row {
+	  	.m_summary {
+			color: inherit;
+		}
+	}
+}
+
+#messageusers {
+	display: block;
+	overflow: auto;
+	&.list-group {
+		margin-bottom: 0px;
+	}
+	.list-group-item {
+		position: relative;
+		padding-left: 32px + 8px + 8px;
+		img.profile_pic {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			left: 8px;
+		}
+
+		h5 {
+			margin: 0;
+		}
+		span { display: block; margin: 4px auto; }
+		span.summ {
+			font-size: 12px;
+			color: #aaa;
+		}
+		span.job {
+			font-size: 11px;
+		}
+		span.time {
+			font-size: 10px;
+			color: @brand-info;
+			position: absolute;
+			right: 16px;
+			top: 5px;
+		}
+
+
+		&.active {
+			span.summ {
+				color: rgba(255, 255, 255, 0.5);
+			}
+			span.job {
+			}
+			span.time {
+				color: rgba(255, 255, 255, 0.4);
+			}
+		}
+	}
+}
+
+.form-message-sender {
+	background-color: @gray-lighter;
+	position: fixed;
+	box-sizing: border-box !important;
+	width: auto;
+	bottom: 0;
+	padding: 16px;
+	padding-bottom: 0px;
+}
+
+body.message-detail {
+	footer {
+		display: none;
+	}
+
+	overflow: none;
+}
+
+#conversation {
+	overflow: auto;
+	.message {
+		position:relative;
+		padding: 16px;
+		padding-left: 78px;
+		// .border-radius(4px);
+		min-height: 86px;
+		border-bottom: 1px solid @gray-lighter;
+		&.to {
+			// background-color: lighten(@brand-info, 34%);
+			border-left: 2px solid @brand-info;
+		}
+		img.profile_pic {
+			position: absolute;
+			left: 16px;
+			width: 48px;
+		}
+		h5 {
+			font-weight: bold;
+			float: left;
+			margin: 0;
+			margin-bottom: 8px;
+		}
+
+		span.time {
+			float: right;
+			font-size: 10px;
+			color: @brand-info;
+		}
+		p {
+			clear: both;
+			float: none;
+			margin: 0;
+		}
+	} 
+}
+
+#message-header {
+
+	background-color: @gray-lighter;
+	padding: 16px;
+	position: relative;
+	padding-left: 78px;
+	border-bottom: 1px solid darken(@gray-lighter, 10%);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	img.profile_pic {
+		position: absolute;
+		left: 16px;
+		width: 48px;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+}
+
+

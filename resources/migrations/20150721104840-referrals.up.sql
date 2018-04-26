@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS referrals
+(id INTEGER AUTO_INCREMENT,
+ job_id VARCHAR(50) NOT NULL,
+ user_id VARCHAR(50) NOT NULL,
+ referral_id VARCHAR(50) NOT NULL,
+ friend_email VARCHAR(100) NOT NULL,
+ is_seen BOOLEAN DEFAULT FALSE,
+ is_clicked BOOLEAN DEFAULT FALSE,
+ is_sent BOOLEAN DEFAULT FALSE,
+ did_sign_up BOOLEAN DEFAULT FALSE,
+ created_at TIMESTAMP,
+ seen_at TIMESTAMP NULL,
+ clicked_at TIMESTAMP NULL,
+ sent_at TIMESTAMP NULL,
+ sign_up_at TIMESTAMP NULL,
+ PRIMARY KEY (id),
+ UNIQUE KEY job_user_unique (job_id, user_id),
+ KEY index_referral_id (referral_id));

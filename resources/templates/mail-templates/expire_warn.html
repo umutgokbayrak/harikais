@@ -1,0 +1,19 @@
+{% extends "mail-templates/base.html" %}
+{% block content %}
+<p>Merhaba,</p>
+<p>Aşağıdaki favori pozisyonunuz yakında kapanıyor. Elinizi çabuk tutun.</p>
+<hr/>
+
+<p>
+    <strong>Pozisyon</strong>: {{ job.headline }}<br/>
+    <strong>Şirket</strong>: {{ company.company_name }}<br/>
+    <strong>Lokasyon</strong>: {{ job.location }}<br/>
+</p>
+<p>
+    <strong>İş Hakkında</strong>:<br/>
+    {{ job.long_description|safe }}<br/>
+    <strong>Şirket Hakkında</strong>:<br/>
+    {{ company.short_description|safe }}
+</p>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+body.signin {
+  background-color: #3b3253;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+h1.logo {
+  text-align: center;
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 30px 40px;
+  margin-bottom: 1px;
+}
+h1.logo img {
+  max-width: 100%;
+}
+@media (max-width: 360px) {
+  h1.logo {
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  h1.logo {
+    margin-top: 0px;
+  }
+}
+h2 {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: white;
+  width: 360px;
+  text-align: center;
+}
+@media (max-width: 360px) {
+  h2 {
+    width: 100%;
+  }
+}
+.form-signin {
+  box-sizing: border-box;
+  width: 360px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px 40px;
+  -webkit-box-shadow: 0px 21px 45px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 21px 45px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 21px 45px -17px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 360px) {
+  .form-signin {
+    width: 100%;
+  }
+}
+.form-signin .form-control {
+  margin-bottom: 8px;
+}
+.form-signin .forgot-pass {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+.alert {
+  position: fixed;
+  width: 360px;
+  left: 50%;
+  top: -50px;
+  margin-left: -180px;
+  font-weight: bold;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-align: center;
+  padding: 10px;
+  -webkit-transition: top 0.5s ease-out;
+  -moz-transition: top 0.5s ease-out;
+  -o-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+}
+.alert.show {
+  top: 8px;
+}
+input.error {
+  border-color: red !important;
+}
+input.warning {
+  border-color: #f0ad4e !important;
+}
+input:input-placeholder {
+  color: red;
+}
+footer {
+  border: none;
+  margin-top: 0;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: white;
+}
+.btn.center {
+  margin: 0 auto;
+  display: block;
+  width: 360px;
+}
+@media (max-width: 360px) {
+  .btn.center {
+    width: 100%;
+  }
+}

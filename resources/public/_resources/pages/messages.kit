@@ -1,0 +1,91 @@
+<!-- $pageClass = messages -->
+<!-- $pageCSS = messages.css -->
+<!-- $pageJS = messages.min.js -->
+<!-- $title = Harika İş # Mesajlar -->
+<!-- $menu1 = - -->
+<!-- $menu2 = - -->
+<!-- $menu3 = active -->
+<!-- $menu4 = - -->
+<!-- @include include/_header.kit -->
+
+<div class="container">
+
+	<div class="row">
+		
+		<div class="col-md-3 hidden-sm hidden-xs">
+			<div class="ghost-header"> </div>
+
+			<div class="list-group">
+			  <a href="#" class="list-group-item active">Gelen Mesajlar <span class="badge">8</span> </a>
+			  <a href="#" class="list-group-item">Gönderilenler </a>
+			  <a href="#" class="list-group-item">Aktif Mesajlar </a>
+			  <span class="list-group-item"></span>
+			  <a href="#" class="list-group-item">Arşiv</a>
+			</div>
+
+		</div>
+
+
+		<div class="col-md-9">
+			<div class="page-header">
+			  <h1>Mesajlar</h1>
+			</div>
+			<!-- eger aday varsa -->
+			<div class="table-responsive" id="mesajlar">
+				<div class="functions">
+					<label class="select-all"><input type="checkbox"/> Tümünü Seç</label>
+					<a class="btn btn-default btn-sm" href="#" role="button">Cevap Yaz</a>
+					<a class="btn btn-default btn-sm" href="#" role="button">Arşivle</a>
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Diğer <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu">
+					    <li><a href="#">Okundu olarak işaretle</a></li>
+					    <li><a href="#">Aday profilini göster</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="#">Kalıcı olarak sil</a></li>
+					    <li><a href="#">Kötüye kullanımı bildir</a></li>
+					  </ul>
+					</div>
+					<form class="form-inline pull-right" action="">
+					  <div class="form-group">
+					    <input type="search" class="form-control input-sm" id="search" placeholder="Arama yapın">
+					  </div>
+					</form>
+				</div>
+			  <table class="table table-hover">
+
+<!-- @include include/_message-list.kit -->
+
+			  </table>
+			</div>
+			<nav>
+			  <ul class="pagination">
+			    <li>
+			      <a href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li class="active"><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li>
+			      <a href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+
+
+		</div>
+
+
+	</div>
+
+</div>
+
+<!-- @include include/_footer.kit -->

@@ -1,0 +1,328 @@
+{% extends "web-templates/base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+            <div class="ghost-header"> </div>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Tüm adaylar <span class="badge">82</span> </a>
+                <a href="#" class="list-group-item">Sr. UI-UX Designer <span class="badge">30</span></a>
+                <a href="#" class="list-group-item">Front-End Developer <span class="badge">20</span></a>
+                <a href="#" class="list-group-item">System Analyst <span class="badge">10</span></a>
+                <span class="list-group-item"></span>
+                <a href="#" class="list-group-item">Favorilerim</a>
+                <a href="#" class="list-group-item">Onaylananlar</a>
+                <a href="#" class="list-group-item">Arşivlenenler</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="page-header">
+                <h1>Tüm adaylar</h1>
+            </div>
+            <!-- eger aday varsa -->
+            <div class="table-responsive" id="adaylar">
+                <div class="functions">
+                    <label class="select-all"><input type="checkbox"/> Tümünü Seç</label>
+                    <a class="btn btn-default btn-sm" href="#" role="button">Arşivle</a>
+                    <a class="btn btn-default btn-sm" href="#" role="button">Reddet</a>
+                    <a class="btn btn-default btn-sm" href="#" role="button">Mesaj Gönder</a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Diğer <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Başka pozisyona taşı</a></li>
+                            <li><a href="#">Favoriden çıkar</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Sil ve şikayet et</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <table class="table table-hover">
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id1" name="fav_id1" /> <label for="fav_id1"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg"></td>
+                        <td><a href="#adayprofil"> James Anderson </a></td>
+                        <td>Sr. UI-UX Designer</td>
+                        <td><div class="matchbar"><span style="width:68%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id2" name="fav_id2" checked="checked" /> <label for="fav_id2"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg"></td>
+                        <td><a href="#adayprofil"> Alexa Andrzejewsky </a></td>
+                        <td>Sr. UI-UX Designer</td>
+                        <td><div class="matchbar"><span style="width:88%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id3" name="fav_id3" /> <label for="fav_id3"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/48.jpg"></td>
+                        <td><a href="#adayprofil"> Louie Mantia </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:52%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id4" name="fav_id4" /> <label for="fav_id4"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/peterme/48.jpg"></td>
+                        <td><a href="#adayprofil"> Peter Merhloz </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:52%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id5" name="fav_id5" checked="checked" /> <label for="fav_id5"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/urakdemir/48.jpg"></td>
+                        <td><a href="#adayprofil"> Ugur Akdemir </a></td>
+                        <td>Sr. UI-UX Designer</td>
+                        <td><div class="matchbar"><span style="width:100%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id6" name="fav_id6" /> <label for="fav_id6"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/48.jpg"></td>
+                        <td><a href="#adayprofil"> Sarah Whinnem </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:69%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id7" name="fav_id7" /> <label for="fav_id7"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ok/48.jpg"></td>
+                        <td><a href="#adayprofil"> Brendan G. Lim </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:77%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id8" name="fav_id8" /> <label for="fav_id8"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/commadelimited/48.jpg"></td>
+                        <td><a href="#adayprofil"> Andy Mathews </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:88%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id9" name="fav_id9" /> <label for="fav_id9"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/whale/48.jpg"></td>
+                        <td><a href="#adayprofil"> Mathew Smith </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:77%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id10" name="fav_id10" /> <label for="fav_id10"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/48.jpg"></td>
+                        <td><a href="#adayprofil"> Adham Dannaway </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:20%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>				<tr>
+                    <td class="select"><input type="checkbox" /></td>
+                    <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id1" name="fav_id1" /> <label for="fav_id1"></label> </div> </td>
+                    <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg"></td>
+                    <td><a href="#adayprofil"> James Anderson </a></td>
+                    <td>Sr. UI-UX Designer</td>
+                    <td><div class="matchbar"><span style="width:68%"></span></div></td>
+                    <td>31/06/2015</td>
+                    <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                    <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                    <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id2" name="fav_id2" checked="checked" /> <label for="fav_id2"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg"></td>
+                        <td><a href="#adayprofil"> Alexa Andrzejewsky </a></td>
+                        <td>Sr. UI-UX Designer</td>
+                        <td><div class="matchbar"><span style="width:88%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id3" name="fav_id3" /> <label for="fav_id3"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/48.jpg"></td>
+                        <td><a href="#adayprofil"> Louie Mantia </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:52%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id4" name="fav_id4" /> <label for="fav_id4"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/peterme/48.jpg"></td>
+                        <td><a href="#adayprofil"> Peter Merhloz </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:52%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id5" name="fav_id5" checked="checked" /> <label for="fav_id5"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/urakdemir/48.jpg"></td>
+                        <td><a href="#adayprofil"> Ugur Akdemir </a></td>
+                        <td>Sr. UI-UX Designer</td>
+                        <td><div class="matchbar"><span style="width:100%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id6" name="fav_id6" /> <label for="fav_id6"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/48.jpg"></td>
+                        <td><a href="#adayprofil"> Sarah Whinnem </a></td>
+                        <td>Front-End Developer</td>
+                        <td><div class="matchbar"><span style="width:69%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id7" name="fav_id7" /> <label for="fav_id7"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ok/48.jpg"></td>
+                        <td><a href="#adayprofil"> Brendan G. Lim </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:77%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id8" name="fav_id8" /> <label for="fav_id8"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/commadelimited/48.jpg"></td>
+                        <td><a href="#adayprofil"> Andy Mathews </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:88%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id9" name="fav_id9" /> <label for="fav_id9"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/whale/48.jpg"></td>
+                        <td><a href="#adayprofil"> Mathew Smith </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:77%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="select"><input type="checkbox" /></td>
+                        <td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id10" name="fav_id10" /> <label for="fav_id10"></label> </div> </td>
+                        <td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/48.jpg"></td>
+                        <td><a href="#adayprofil"> Adham Dannaway </a></td>
+                        <td>Sr. Java Developer</td>
+                        <td><div class="matchbar"><span style="width:20%"></span></div></td>
+                        <td>31/06/2015</td>
+                        <td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+                        <td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+                        <td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+                    </tr>
+                </table>
+            </div>
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

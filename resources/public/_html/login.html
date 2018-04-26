@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-itunes-app" content="app-id=XXXXXXXX">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
+        <title>Harika İŞ # Üye Girişi</title>
+    </head>
+<body class="signin" > 
+<div class="alert alert-danger" role="alert"> 
+E-posta adresi ve şifre yanlış.
+</div>
+<div class="container">
+	<div class="row">
+		<div class="colon">
+			<h1 class="logo"><img src="/assets/img/logo.svg"></h1>
+			<form class="form-signin" action="_dashboard.html">
+				<label for="inputEmail">Kullanıcı e-posta adresi</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="isim@domain.com" required="" autofocus="">
+				<label for="inputPassword">Şifreniz</label>
+				<input type="password" id="inputPassword" class="form-control" placeholder="********" required="">
+				<div class="checkbox">
+				<label>
+				<input type="checkbox" value="remember-me"> Beni hatırla (2 hafta)
+				</label>
+				</div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Giriş yap</button>
+				<a class="forgot-pass" href="login-password-forgot.html">Şifremi unuttum</a>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container text-center">
+	    <div class="col-xs-12">
+	    	<a href="#"><b>Üye değil misiniz?</b> <br/>
+	    	Şimdi İşveren üyemiz olmak için tıklayın</a>
+	    </div>
+	</div>
+</footer>
+
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.form-signin button[type="submit"]').click(function(){
+			var inputEmail = $('#inputEmail'),
+				inputPassword = $('#inputPassword'),
+				inputCheckbox = $('.checkbox input[type="checkbox"]'),
+				errormsg = ' ';
+
+			$('div[role="alert"]').removeClass("show");
+
+			if(inputEmail.val().length > 0 && inputPassword.val().length > 0) {
+				if(mailCheck(inputEmail.val()) == false) {
+					$('div[role="alert"]')
+						.html("Lütfen geçerli bir e-posta adresi kullanın.")
+						.addClass('show');
+					inputEmail.focus().addClass("warning");
+					return false;
+				}
+			}else {
+				inputEmail.focus();
+				$('div[role="alert"]')
+					.html("Lütfen formu eksiksiz doldurun.")
+					.addClass('show');
+				return false;
+			}
+			return true;
+		});
+
+		$('.form-signin input').click(function(){
+			$('div[role="alert"]').removeClass("show");
+		})
+
+		function mailCheck(mail){
+			var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+			if (filter.test(mail))
+				return true;
+			else{
+				return false;
+			}
+		}
+	});
+</script>
+</body>
+</html>

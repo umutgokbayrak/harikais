@@ -1,0 +1,23 @@
+{% extends "mail-templates/base.html" %}
+{% block content %}
+    <p>Sayın {{ fullname }},</p>
+    <p>Welcome to Harika İş!  My name is Anna, and I lead customer success here.
+        Please let me know if you need any help getting set up or using any of
+        Harika İş's features.</p>
+    <p>How are you planning on using Harika İş? What features are you particularly
+        interested in taking full advantage of? I want to make sure your integration
+        goes as smooth as possible.</p>
+    <p>As you continue to use Harika İş, please let me know if you have any feedback
+        or if there’s anything you’d like to see. Our team is working hard to constantly
+        improve Harika İş, and feedback helps narrow our focus.</p>
+    <p>Thank you!</p>
+{% endblock %}
+
+{% block signature %}
+<p>
+--<br/>
+Anna Chaby<br/>
+Customer Success, Harika İş<br/></p>
+
+<p>P.S. Yes, this is an automated email, but if you respond it will go right to me!</p>
+{% endblock %}

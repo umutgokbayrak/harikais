@@ -1,0 +1,11 @@
+^target$
+.lein-env
+.nrepl-port
+.gitignore
+.hg
+.hgcheck
+.lein-repl-history
+harikais.log
+figwheel_server.log
+resources/public/js/out
+target/stale

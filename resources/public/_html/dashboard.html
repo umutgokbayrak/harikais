@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-itunes-app" content="app-id=XXXXXXXX">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link type="text/css" rel="stylesheet" href="/assets/css/dashboard.css" />
+        <title>Harika İŞ # Harika İş # Son durum</title>
+    </head>
+<body class="dashboard"> 
+
+<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="_dashboard.html" class="navbar-brand"><img src="/assets/img/logo.svg"></a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="-">
+          <a href="jobs.html">İlanlarım</a>
+        </li>
+        <li class="-">
+          <a href="candidates.html">Adaylar</a>
+        </li>
+        <li class="-">
+          <a href="messages.html">Mesajlar <span class="badge">5</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown -">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lemonat Studio <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="account_info.html">Hesabım</a></li>
+            <li><a href="#">Ayarlar</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Güvenli Çıkış</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+<div class="overview">
+	<div class="container">
+		<div class="row">
+			<a href="#"> <b> 8 </b> <span> Yeni Aday </span> </a>
+			<a href="#"> <b> 45 </b> <span> Değerlendirme bekliyor </span> </a>
+			<a href="#"> <b> 10 </b> <span> Görüşülüyor </span> </a> 
+			<a href="#"> <b> 3 </b> <span> Onaylandı </span> </a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+<!-- <div class="col-md-4">
+	<nav class="hidden-print hidden-xs hidden-sm affix">
+	    <ul class="nav">
+	        <li><a href="#">Kullanıcı Bilgileri</a></li>
+			<li><a href="#">Ayarlar</a></li>
+			<li><a href="#">Bildirim Ayarları</a></li>
+			<li><a href="#">Çıkış Yap</a></li>
+		</ul>
+	</nav>
+
+</div> -->
+
+	<div class="row">
+		<div class="col-md-9">
+			<div class="page-header">
+			  <h1>Adaylar</h1>
+			</div>
+			<!-- eger aday varsa -->
+			<div class="table-responsive" id="adaylar">
+			  <table class="table table-hover">
+
+				<tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id1" name="fav_id1" /> <label for="fav_id1"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg"></td>
+			    	<td><a href="#adayprofil"> James Anderson </a></td>
+			    	<td>Sr. UI-UX Designer</td>
+			    	<td><div class="matchbar"><span style="width:68%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id2" name="fav_id2" checked="checked" /> <label for="fav_id2"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Alexa Andrzejewsky </a></td>
+			    	<td>Sr. UI-UX Designer</td>
+			    	<td><div class="matchbar"><span style="width:88%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id3" name="fav_id3" /> <label for="fav_id3"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Louie Mantia </a></td>
+			    	<td>Front-End Developer</td>
+			    	<td><div class="matchbar"><span style="width:52%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id4" name="fav_id4" /> <label for="fav_id4"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/peterme/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Peter Merhloz </a></td>
+			    	<td>Front-End Developer</td>
+			    	<td><div class="matchbar"><span style="width:52%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id5" name="fav_id5" checked="checked" /> <label for="fav_id5"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/urakdemir/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Ugur Akdemir </a></td>
+			    	<td>Sr. UI-UX Designer</td>
+			    	<td><div class="matchbar"><span style="width:100%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen done"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted done"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id6" name="fav_id6" /> <label for="fav_id6"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Sarah Whinnem </a></td>
+			    	<td>Front-End Developer</td>
+			    	<td><div class="matchbar"><span style="width:69%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id7" name="fav_id7" /> <label for="fav_id7"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/ok/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Brendan G. Lim </a></td>
+			    	<td>Sr. Java Developer</td>
+			    	<td><div class="matchbar"><span style="width:77%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id8" name="fav_id8" /> <label for="fav_id8"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/commadelimited/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Andy Mathews </a></td>
+			    	<td>Sr. Java Developer</td>
+			    	<td><div class="matchbar"><span style="width:88%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted done"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id9" name="fav_id9" /> <label for="fav_id9"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/whale/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Mathew Smith </a></td>
+			    	<td>Sr. Java Developer</td>
+			    	<td><div class="matchbar"><span style="width:77%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+
+			    <tr>
+			    	<td class="select"><input type="checkbox" /></td>
+			    	<td> <div class="favorite"> <input type="checkbox" value="None" id="fav_id10" name="fav_id10" /> <label for="fav_id10"></label> </div> </td>
+			    	<td><img class="profile_pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/48.jpg"></td>
+			    	<td><a href="#adayprofil"> Adham Dannaway </a></td>
+			    	<td>Sr. Java Developer</td>
+			    	<td><div class="matchbar"><span style="width:20%"></span></div></td>
+			    	<td>31/06/2015</td>
+			    	<td class="is_seen"> <i class="material-icons">&#xE417;</i> </td>
+			    	<td class="is_chatted"> <i class="material-icons">&#xE0C9;</i> </td>
+			    	<td class="is_accepted"> <i class="material-icons">&#xE7F2;</i> </td>
+			    </tr>
+			  </table>
+			  <a href="candidates.html" class="btn btn-default">Tüm adayları listele</a>
+			</div>
+
+			<!-- eger ilan var aday yoksa -->
+			<div class="alert alert-info" role="alert">
+			  Henüz ilanlarınıza başvuran bir aday yok. Başvuru geldiğinde size e-posta ile bilgilendireceğiz. Lütfen daha sonra tekrar deneyin veya <a href="#" class="alert-link">yeni bir ilan ekleyin.</a>
+			</div>
+
+			<!-- eger ilan yoksa -->
+
+			<div class="alert alert-info" role="alert">
+			  Henüz hiç ilan tanımlamadınız. Şimdi <a href="#" class="alert-link">yeni bir ilan ekleyin.</a>
+			</div>
+
+
+		</div>
+
+		<div class="col-md-3">
+			<div class="page-header">
+			  <h1>İlanlarım</h1>
+			</div>
+			<div class="table-responsive">
+			<table class="table table-hover">
+				<tr>
+					<td><a href="#basvurulistesi">Sr. UI-UX Designer</a></td>
+					<td>( 30 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">Front-End Developer</a></td>
+					<td>( 8 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">Sr. Java Developer</a></td>
+					<td>( 12 )</td>
+				</tr>
+				<tr>
+					<td><a href="#basvurulistesi">System Analyst</a></td>
+					<td>( 0 )</td>
+				</tr>
+			</table>
+			<a href="jobs_new.html" class="btn btn-block btn-primary">Yeni İlan Ekle</a>
+		</div>
+
+	</div>
+
+</div>
+
+	<footer>
+		<div class="container text-center">
+		    <div class="col-xs-12">
+		    	<a href="#">Kullanım Koşulları</a> - 
+		    	<a href="#">Gizlilik</a> - 
+		    	<a href="#">Güvenlik</a> - 
+		    	<a href="#">Yardım</a>
+		    </div>
+		    <div class="col-xs-12">
+		    	<span>© 2015 Harika İş - Tüm hakları saklıdır</span>
+		    </div>
+		</div>
+	</footer>
+
+	<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/moment.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.min.js"></script>
+<script src="/assets/js/bootstrap-tokenfield.min.js"></script>
+<script src="/assets/js/typeahead.bundle.min.js"></script>	<script src="/assets/js/dashboard.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!-- $pageClass = jobs -->
+<!-- $pageCSS = jobs.css -->
+<!-- $pageJS = jobs_new.min.js -->
+<!-- $title = Yeni İlan Girişi -->
+<!-- $menu1 = active -->
+<!-- $menu2 = - -->
+<!-- $menu3 = - -->
+<!-- $menu4 = - -->
+<!-- @include include/_header.kit -->
+
+<div class="container">
+
+	<div class="row">
+		<div class="page-header col-lg-10 col-lg-offset-1">
+			<h1>Yeni İlan Girişi<small class="pull-right">6 / 10</small> </h1>
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-lg-6 col-lg-offset-1 col-sm-8">
+			
+			<form name="newpost" id="newpost" action="jobs_detail.html">
+
+			  <div class="form-group">
+			    <label for="headline">İlan başlığı</label>
+			    <input type="text" class="form-control" name="headline" id="headline" placeholder="Sr. Interface Developer">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="location">İşin Konumu</label>
+				<select class="form-control" name="location" id="location">
+					<option > -- Bir bölge seçin -- </option>
+					<option value="İstanbul / Avrupa Yakası">İstanbul / Avrupa Yakası</option>
+					<option value="İstanbul / Anadolu Yakası">İstanbul / Anadolu Yakası</option>
+					<option value="Adana">Adana</option>
+					<option value="Adıyaman">Adıyaman</option>
+					<option value="Afyon">Afyon</option>
+					<option value="Ağrı">Ağrı</option>
+				</select>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="long_description">İlan açıklaması</label>
+			    <textarea class="form-control" name="long_description" id="long_description" rows="3"></textarea>
+			   	<span class="help-block">İlanınızın açıklama giriniz. (HTML kodları desteklenmez)</span>
+
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="jobs_skills">Beceriler</label>
+			  	<input type="text" class="form-control typeahead tokenfield" name="jobs_skills" id="jobs_skills" value="" placeholder="Ajax, Photoshop vb."/>
+			  	<span class="help-block">İlan edilen işin gerektirdiği becerileri ekleyin. (Birden fazla beceri ekleyebilirsiniz.)</span>
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="jobs_functionality">Çalışma Alanı</label>
+			  	<input type="text" class="form-control typeahead tokenfield" name="jobs_functionality" id="jobs_functionality" value="" placeholder="Yazılım Mühendisliği vb." />
+			  	<span class="help-block">İlan kapsamındaki işin faaliyet alanını girin.</span>
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="jobs_titles">Ünvanlar</label>
+			  	<input type="text" class="form-control typeahead tokenfield" name="jobs_titles" id="jobs_titles" value="" placeholder="Senior Developer vb." />
+			  	<span class="help-block">Adayların daha önce tecrübe edinmiş olmasını istediğiniz görev ve ünvanları ekleyin.</span>
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="jobs_schools">Mezun Olunan Okul</label>
+			  	<input type="text" class="form-control typeahead tokenfield" name="jobs_schools" id="jobs_schools" value="" placeholder="Boğaziçi Üniversitesi vb." />
+			  	<span class="help-block">Adayların mezun oldukları eğitim kurumları içinde öncelikli  ettiklerinizi belirtiniz.</span>
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="jobs_fields_of_studies">Eğitim görülen bölüm</label>
+			  	<input type="text" class="form-control typeahead tokenfield" name="jobs_fields_of_studies" id="jobs_fields_of_studies" value="" placeholder="Yazılım Mühendisliği vb." />
+			  	<span class="help-block">Adayların mezun oldukları bölümler içinde öncelikli ettiklerinizi belirtiniz.</span>
+			  </div>
+
+			  <hr/>
+
+			  <div class="form-group">
+			    <label for="experience">Kaç yıllık deneyim arıyorsunuz?</label>
+			    <div class="input-group">
+			    	<input type="number" class="form-control" name="experience" id="experience" placeholder="Örn. 4">
+			    	<div class="input-group-addon">YIL</div>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label for="salary_begin">Maaş aralığını girin</label>
+			    <div class="input-group block">
+				    <input type="text" class="form-control" name="salary_begin" id="salary_begin" placeholder="0.000"/>
+				    <span class="input-group-addon">-</span>
+				    <input type="text" class="form-control" name="salary_end" id="salary_end" placeholder="0.000"/>
+				</div>
+			  </div>
+
+			   <hr />
+
+			  <div class="form-group">
+			  	<label for="start">İlanınızın başlangıç ve bitiş tarihleri</label>
+			    <div class="input-daterange input-group block" id="datepicker">
+				    <input type="text" class="form-control" name="start" id="created_date" />
+				    <span class="input-group-addon">/</span>
+				    <input type="text" class="form-control" name="end" id="expire_date"/>
+				</div>
+			  </div>
+
+			  <div class="checkbox">
+			  	<input type="hidden" name="company" id="company" value="Lemonat Bilişim Hizmetleri Ltd.">
+			  	<input type="hidden" name="company_industry" id="company_industry" value="Teknoloji">
+			    <label>
+			      <input type="checkbox" name="is_secret" id="is_secret">İlanda şirketin bilgilerini gizli tut. 
+			    </label>
+			    <span class="help-block">Bu seçimi yaparsanız şirket adı, adresi ve şirket detayı sayfası adaylara gösterilmeyecektir.</span>
+			  </div>
+			  
+			  <hr />
+
+			  <input type="submit" class="btn btn-primary pull-right" value="İlanı Kaydet" />
+		 <!-- <a class="btn btn-link pull-right" href="jobs_new.html" role="button"> Taslak olarak kaydet</a> -->
+
+			</form>
+
+		</div>
+
+		<!-- Job Preview Widget -->
+		<div class="col-lg-3 col-lg-offset-1 col-sm-4">
+			<div data-spy="affix" data-offset-top="190" data-offset-bottom="200">
+				<label>İlan ön izlemesi</label>
+				<div class="jPreview" id="job_preview_holder">
+					<div class="company"> <span id="j_company"> Lemonat Bilişim Hizmetleri Ltd. Şti. </span> </div>
+					<div class="headline"> <span id="j_headline"> Backend Java Developer </span> </div>
+					<div class="photo"> <img src="/assets/img/office_photo.jpg" /> </div>
+					<div class="location"> <span id="j_location"> Beyoğlu / İstanbul </span> </div>
+					<div class="description"> <span id="j_long_description"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,. </span> </div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div><!-- // Container End -->
+
+<!-- @include include/_footer.kit -->

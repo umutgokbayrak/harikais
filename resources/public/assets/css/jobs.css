@@ -1,0 +1,144 @@
+.affix {
+  position: fixed;
+  top: 20px;
+}
+@media (min-width: 768px) {
+  .affix {
+    width: 210px;
+  }
+}
+@media (min-width: 992px) {
+  .affix {
+    width: 283px;
+  }
+}
+@media (min-width: 1200px) {
+  .affix {
+    width: 253px;
+  }
+}
+@media (max-width: 480px) {
+  .affix {
+    width: 100%;
+    position: static !important;
+    margin-top: 100px;
+  }
+}
+.affix-top {
+  position: static;
+}
+@media (min-width: 768px) {
+  .affix-top {
+    width: 210px;
+  }
+}
+@media (min-width: 992px) {
+  .affix-top {
+    width: 283px;
+  }
+}
+@media (min-width: 1200px) {
+  .affix-top {
+    width: 253px;
+  }
+}
+@media (max-width: 480px) {
+  .affix-top {
+    width: 100%;
+    position: static !important;
+    margin-top: 100px;
+  }
+}
+.affix-bottom {
+  position: absolute;
+}
+@media (min-width: 768px) {
+  .affix-bottom {
+    width: 210px;
+  }
+}
+@media (min-width: 992px) {
+  .affix-bottom {
+    width: 283px;
+  }
+}
+@media (min-width: 1200px) {
+  .affix-bottom {
+    width: 253px;
+  }
+}
+@media (max-width: 480px) {
+  .affix-bottom {
+    width: 100%;
+    position: static !important;
+    margin-top: 100px;
+  }
+}
+.jPreview {
+  background: #FFFFFF;
+  border: 1px solid #E3E3E3;
+  box-shadow: 0px 2px 2px 0px #E3E3E3;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+.jPreview > div {
+  text-align: center;
+  font-size: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 6px;
+}
+.jPreview .company {
+  color: #333;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.jPreview .headline {
+  color: #999;
+}
+.jPreview .photo {
+  padding: 0;
+}
+.jPreview .photo img {
+  max-width: 100%;
+}
+.jPreview .location {
+  text-align: left;
+  font-weight: bold;
+}
+.jPreview .location:before {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  content: "location_on";
+  font-size: 12px;
+  padding-top: 2px;
+}
+.jPreview .description {
+  text-align: left;
+  height: 116px;
+  overflow: scroll;
+}
+.jPreview .company,
+.jPreview .headline {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

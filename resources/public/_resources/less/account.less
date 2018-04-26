@@ -1,0 +1,75 @@
+// Page Specific CSS
+// CSS Group : ACCOUNT
+// File Name : account.css
+// Author : Ugur Akdemir
+
+// Project Variables And Mixins imports
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "common/mixin.less";
+// 
+
+// width mixin 
+.content .form-group {
+	.make-md-column(8);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.form-functions {
+	border-top: 1px solid #ccc;
+	background-color: lighten(@brand-bg, 70%);
+	padding: 15px !important;
+
+	& + div {
+		margin-top: 40px;
+		padding-left: 15px !important;
+	}
+}
+
+.remove-me {
+	color: #aaa;
+	text-decoration: underline;
+	font-size: 11px;
+	&:hover {
+		color: red;
+		text-decoration: line-through;
+	}
+}
+
+.membership {
+	.make-md-column(8);
+	padding: 15px;
+	margin-bottom: 15px;
+	display: block;
+	background-color: @gray-lighter;
+	border: 1px solid @input-border;
+
+	h4 {
+		display: inline;
+		margin: 0;
+		font-size: 14px;
+		b {
+			font-size: 18px;
+			color: @brand-success;
+		}
+	}
+}
+
+@media (max-width: @screen-sm) { 
+
+	.ghost-header { display:none; }
+	.list-group {
+		a { 
+			display: inline-block; 
+			width: 33%;
+			margin-right: -1px;
+			text-align: center;
+			.border-radius(0px) !important;
+		}
+	}
+
+
+
+}
+

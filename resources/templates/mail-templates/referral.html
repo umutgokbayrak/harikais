@@ -1,0 +1,25 @@
+{% extends "mail-templates/base.html" %}
+{% block content %}
+<p>Merhaba,</p>
+
+<p>Bu mesajı size arkadaşınızın ({{ friend }}) önerisi üzerine atıyoruz.</p>
+
+<p>Harika İş, özel vasıflı kişilerin, anonim olarak iş fırsatlarından haberdar oldukları insan kaynakları sitesidir.</p>
+
+<p>
+    Arkadaşınızın önerdiği fırsattan kısaca bahsetmek gerekirse:<br/>
+    <strong>Şirket:</strong> {{ company }}<br/>
+    <strong>Pozisyon:</strong> {{ headline }}<br/>
+    <strong>Yer:</strong> {{ location }}
+<p>
+
+<p>
+    Bu fırsat veya Harika İş'te olabilecek diğer yüzlerce fırsattan bir tanesinin ilginizi çekeceğini
+    düşünüyorsanız, hemen <a href="{{ link }}" target="_blank">bağlantıya</a> tıklayarak (%100 ücretsiz) üye olabilirsiniz.
+    Eğer bağlantı çalışmıyorsa aşağıdaki metni kopyalayıp web tarayıcınızın adres kısmına
+    yapıştırmanız yeterlidir.
+</p>
+
+<p>{{ link }}<p>
+
+{% endblock %}

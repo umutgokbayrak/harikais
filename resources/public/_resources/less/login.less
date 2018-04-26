@@ -1,0 +1,125 @@
+// Page Specific CSS
+// CSS Group : LOGIN
+// File Name : login.css
+// Author : Ugur Akdemir
+
+// Project Variables And Mixins imports
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+@import "common/mixin.less";
+// 
+
+// width mixin 
+.make-width() {
+	width: 360px;
+	@media (max-width: 360px) { 
+      width: 100%;
+  	}
+}
+
+body.signin {
+	// background-color: @gray-lighter;
+	background-color: @brand-bg;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+h1.logo {
+	text-align: center;
+	img {
+		max-width: 100%;
+		// margin-top: -32px;
+		// margin-bottom: 10px;
+	}
+	.make-width();
+	margin: 0 auto;
+	margin-top: 80px;
+	@media (max-width: 360px) { 
+      margin-top: 0px;
+  	}
+	padding: 30px 40px;
+	margin-bottom: 1px;
+}
+
+h2 {
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	color: white;
+	.make-width();
+	text-align: center;
+}
+
+
+.colon {
+	// .make-sm-column(6);
+	// .make-sm-column-offset(3);
+}
+
+.form-signin {
+	box-sizing: border-box;
+	.make-width();
+	margin: 0 auto;
+	background-color: white;
+	padding: 30px 40px;
+	.box-shadow(0px 21px 45px -17px rgba(0,0,0,0.75));
+	// border: 1px solid darken(@gray-lighter,5%);
+
+	.form-control {
+		margin-bottom: 8px;
+	}
+
+	.forgot-pass {
+		text-align: center;
+		display: block;
+		
+		margin-top: 20px;
+	}
+}
+
+.alert {
+	position: fixed;
+	width: 360px;
+	left: 50%;
+	top: -50px;
+	margin-left: -180px;
+	font-weight: bold;
+	.border-radius(0);
+	text-align: center;
+	padding: 10px;
+	.transition(top .5s ease-out);
+	&.show {
+		top: 8px;
+	}
+}
+
+input {
+	&.error {
+		border-color: red !important;
+	}
+	&.warning {
+		border-color: @brand-warning !important;
+	}
+	&:input-placeholder {
+		color: red;
+	}
+}
+
+footer {
+	border:none;
+	margin-top: 0;
+	a { 
+		color: white;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.btn.center {
+	margin: 0 auto;
+	display: block;
+	.make-width();
+}
